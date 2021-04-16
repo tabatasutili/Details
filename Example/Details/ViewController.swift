@@ -16,14 +16,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        print(aaa)
         
-       let viewController = UIViewController(nibName: "DetailsViewController", bundle: nil)
-
-       self.navigationController?.pushViewController(viewController, animated: true)
         
+        let viewController = DetailsViewController(nome: "aaaa")
+        
+     self.navigationController?.pushViewController(viewController, animated: true)
     }
-
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
 }
