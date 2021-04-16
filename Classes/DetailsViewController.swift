@@ -17,10 +17,20 @@ public class DetailsViewController: UIViewController {
     @IBOutlet weak var lastMonth: UILabel!
     @IBOutlet weak var lastYear: UILabel!
     
-    private var nome: String
+    //MARK: Vars
     
-    public init(nome: String){
-        self.nome = nome
+    private var sigla: String
+   // private var icon: String
+  //  private var star: String
+    private var price: String
+//    private var favorite: String
+//    private var volumeHour: String
+//    private var volumeMoth: String
+//    private var volumeYear: String
+    
+    public init(sigla: String, price: String){
+        self.sigla = sigla
+        self.price = price
         
         super.init(nibName:"DetailsViewController", bundle: Bundle(for: DetailsViewController.self))
     }
@@ -29,9 +39,22 @@ public class DetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: Functions
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
+        setTela()
         setBorderButton()
+        
+    }
+    
+    func setTela(){
+        siglaLabel.text = sigla
+        //iconImage.image =
+        //priceLabel.text = price
+        //lastHour.text = volumeHour
+        //lastMonth.text = volumeMoth
+        //lastYear.text = volumeYear
     }
     
     func setBorderButton(){

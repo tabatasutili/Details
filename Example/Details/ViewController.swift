@@ -12,20 +12,16 @@ import API
 import DataModels
 
 class ViewController: UIViewController {
-    
-    let coin = [Coin]()
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
         
-        
-        
-        
-        let viewController = DetailsViewController(sigla: "aaaa", price: "BBBB")
-        
+     var viewController = DetailsViewController(sigla: String, price: String)
      self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
