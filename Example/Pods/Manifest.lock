@@ -8,7 +8,11 @@ PODS:
   - DataModels (0.1.0):
     - AlamofireImage
     - SwiftLint
-  - Details (0.1.0)
+  - Details (0.1.0):
+    - LucasCoinAPI
+  - LucasCoinAPI (0.0.1):
+    - AlamofireImage
+    - SwiftLint
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
@@ -21,6 +25,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - LucasCoinAPI
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -44,7 +49,8 @@ SPEC CHECKSUMS:
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   API: f29b9cc4a24497fbd7d3154abd1b167ead56636a
   DataModels: b2f8c7025a553f5eafc14713f90b80d72753e35f
-  Details: 7e7743ff529ba57d7fe1d6af3027826a057f9164
+  Details: 77ef8c6f093a967db4bedf0ca29372019a18b801
+  LucasCoinAPI: 62d41fe08e88c4656279cd43093985810322ce8c
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
 PODFILE CHECKSUM: 89bc80fb8c7c7be9b7a9fae86c002ab0c7d1702b

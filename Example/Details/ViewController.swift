@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         
-     var viewController = DetailsViewController(sigla: String, price: String)
+     var viewController = DetailsViewController(index: 3)
      self.navigationController?.pushViewController(viewController, animated: true)
         
     }
