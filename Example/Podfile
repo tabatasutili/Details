@@ -5,6 +5,9 @@ use_frameworks!
 target 'Details_Example' do
   pod 'Details', :path => '../'
   pod 'SwiftLint'
+  
+  pod 'API', :git => 'https://github.com/lucaswkuipers/API.git'
+  pod 'DataModels', :git => 'https://github.com/ssabrinasu/DataModels.git'
 
   target 'Details_Tests' do
     inherit! :search_paths

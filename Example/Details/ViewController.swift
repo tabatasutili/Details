@@ -8,8 +8,13 @@
 
 import UIKit
 import Details
+import API
+import DataModels
 
 class ViewController: UIViewController {
+    
+    let coin = [Coin]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +23,7 @@ class ViewController: UIViewController {
         
         
         
-        let viewController = DetailsViewController(nome: "aaaa")
+        let viewController = DetailsViewController(sigla: "aaaa", price: "BBBB")
         
      self.navigationController?.pushViewController(viewController, animated: true)
     }
@@ -27,5 +32,5 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-
+ 
 }

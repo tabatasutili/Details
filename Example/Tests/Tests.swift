@@ -1,5 +1,5 @@
 import XCTest
-import Details
+
 
 class Tests: XCTestCase {
     

@@ -1,23 +1,52 @@
 PODS:
+  - Alamofire (5.4.1)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - API (1.0.0):
+    - AlamofireImage
+    - SwiftLint
+  - DataModels (0.1.0):
+    - AlamofireImage
+    - SwiftLint
   - Details (0.1.0)
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
+  - API (from `https://github.com/lucaswkuipers/API.git`)
+  - DataModels (from `https://github.com/ssabrinasu/DataModels.git`)
   - Details (from `../`)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - AlamofireImage
     - SwiftLint
 
 EXTERNAL SOURCES:
+  API:
+    :git: https://github.com/lucaswkuipers/API.git
+  DataModels:
+    :git: https://github.com/ssabrinasu/DataModels.git
   Details:
     :path: "../"
 
+CHECKOUT OPTIONS:
+  API:
+    :commit: 37692b02c58c3d2d3e898b54691b8e0b96733a40
+    :git: https://github.com/lucaswkuipers/API.git
+  DataModels:
+    :commit: 848fc3bc2b52fada29941537ee4acc296fb613fa
+    :git: https://github.com/ssabrinasu/DataModels.git
+
 SPEC CHECKSUMS:
-  Details: 608e308677ad30c9a53a28ea31d570509494f613
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  API: f29b9cc4a24497fbd7d3154abd1b167ead56636a
+  DataModels: b2f8c7025a553f5eafc14713f90b80d72753e35f
+  Details: 7e7743ff529ba57d7fe1d6af3027826a057f9164
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: fadb610bb259d4fda4f9d628265f920605f34a4c
+PODFILE CHECKSUM: 89bc80fb8c7c7be9b7a9fae86c002ab0c7d1702b
 
 COCOAPODS: 1.10.1
