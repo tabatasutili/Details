@@ -48,7 +48,7 @@
 		93ED9AC22628EFD10070B3B3 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
 		93ED9AC32628EFD10070B3B3 /* TesteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TesteViewController.xib; sourceTree = "<group>"; };
 		9B925243B746FE9CD384F002 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C7C3E2624138F9D514EAE965 /* Details.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Details.podspec; path = ../Details.podspec; sourceTree = "<group>"; };
+		C7C3E2624138F9D514EAE965 /* Details.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Details.podspec; path = ../Details.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F9A48FAE3C582B83DB6FFD0C /* Pods-Details_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Details_Example.debug.xcconfig"; path = "Target Support Files/Pods-Details_Example/Pods-Details_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FA44C66D369382E0448E9785 /* Pods_Details_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Details_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */

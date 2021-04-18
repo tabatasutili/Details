@@ -16,7 +16,7 @@
                 <outlet property="lastHour" destination="56n-sA-At2" id="G5t-kP-rP3"/>
                 <outlet property="lastMonth" destination="9yn-WP-a2b" id="dMz-dr-z3T"/>
                 <outlet property="lastYear" destination="Rr4-wJ-3eh" id="vHz-gu-q0k"/>
-                <outlet property="prieceLabel" destination="mnf-jG-OXc" id="m8p-C5-8aQ"/>
+                <outlet property="priceLabel" destination="mnf-jG-OXc" id="8Td-I7-yro"/>
                 <outlet property="siglaLabel" destination="9ct-ZL-dOH" id="kP6-jE-NVd"/>
                 <outlet property="starImage" destination="i2I-4O-Gd2" id="yWc-6Y-KCR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -120,10 +120,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-6e-PaK">
                     <rect key="frame" x="0.0" y="0.0" width="390" height="360"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ct-ZL-dOH">
-                            <rect key="frame" x="177.66666666666666" y="52" width="35" height="26"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ct-ZL-dOH">
+                            <rect key="frame" x="157.66666666666666" y="52" width="75" height="26"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="35" id="YtM-X0-atq"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="EzO-8m-bHM"/>
                                 <constraint firstAttribute="height" constant="26" id="sec-PZ-rP1"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
