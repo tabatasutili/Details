@@ -6,6 +6,7 @@
 //
 import UIKit
 import LucasCoinAPI
+import AlamofireImage
 
 
 public class DetailsViewController: UIViewController {
@@ -19,7 +20,7 @@ public class DetailsViewController: UIViewController {
     @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var lastHour: UILabel!
     @IBOutlet weak var lastMonth: UILabel!
-    @IBOutlet weak var lastYear: UILabel!
+    @IBOutlet weak var lastDay: UILabel!
     
     
     //MARK: Vars
@@ -62,16 +63,25 @@ public class DetailsViewController: UIViewController {
         
         let coin = coinsResults[0]
         let model = DetailsViewModel.init(coin: coin)
+        
+        let urlModel = model.icon
+        let newUrl = urlModel.replacingOccurrences(of: "-", with: "")
+        guard let url = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(newUrl).png") else { return }
+        iconImage.af_setImage(withURL: url)
        
         let modelPrice = String(formatNumberToDecimal(value: model.price))
+        let modelHour = String(formatNumberToDecimal(value: model.lastHour))
+        let modelMonth = String(formatNumberToDecimal(value: model.lastMonth))
+        let modelday = String(formatNumberToDecimal(value: model.lastDay))
      
         
         siglaLabel.text = model.identifier
-        //iconImage.image = model.icon
+        //iconImage.image = imageData
         priceLabel.text = modelPrice
-        lastHour.text = model.lastHour
-        lastMonth.text = model.lastMonth
-        lastYear.text = model.lastYear
+        lastHour.text = modelHour
+        lastDay.text = modelday
+        lastMonth.text = modelMonth
+        
         
         print(coinsResults[0])
     }

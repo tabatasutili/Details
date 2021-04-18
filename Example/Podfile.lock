@@ -9,6 +9,7 @@ PODS:
     - AlamofireImage
     - SwiftLint
   - Details (0.1.0):
+    - AlamofireImage
     - LucasCoinAPI
   - LucasCoinAPI (0.0.1):
     - AlamofireImage
@@ -49,7 +50,7 @@ SPEC CHECKSUMS:
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   API: f29b9cc4a24497fbd7d3154abd1b167ead56636a
   DataModels: b2f8c7025a553f5eafc14713f90b80d72753e35f
-  Details: 77ef8c6f093a967db4bedf0ca29372019a18b801
+  Details: bca67900cfc08b378e7f90556111cc46b66ae0a8
   LucasCoinAPI: 62d41fe08e88c4656279cd43093985810322ce8c
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 

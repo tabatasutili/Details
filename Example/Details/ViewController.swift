@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         
-     var viewController = DetailsViewController(id: "BTC")
+     var viewController = DetailsViewController(id: "PLN")
      self.navigationController?.pushViewController(viewController, animated: true)
         
     }

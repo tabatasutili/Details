@@ -18,7 +18,7 @@ public struct Coin: Codable {
 	let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String?
 	let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: String?
 	let dataSymbolsCount: Int
-	let volume1HrsUsd, volume1DayUsd, volume1MthUsd: Double
+    public let volume1HrsUsd, volume1DayUsd, volume1MthUsd: Double
 	public let priceUsd: Double?
 	public let idIcon: String?
 
