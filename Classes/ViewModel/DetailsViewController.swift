@@ -6,12 +6,14 @@
 //
 import UIKit
 import LucasCoinAPI
+import LucasUtilities
 import AlamofireImage
 
 
 public class DetailsViewController: UIViewController {
 
     //MARK: IBOutlet
+    
     
     @IBOutlet weak var siglaLabel: UILabel!
     @IBOutlet weak var starImage: UIImageView!
@@ -22,11 +24,12 @@ public class DetailsViewController: UIViewController {
     @IBOutlet weak var lastMonth: UILabel!
     @IBOutlet weak var lastDay: UILabel!
     
+ 
     
     //MARK: Vars
     
     var coinsResults = [Coin]()
-    let list = "AAA|BTC|HHH|KKK"
+    var favoriteList  = "AAA|BTC|HHH|KKK"
     var id: String
     
     //MARK: Init
@@ -51,7 +54,15 @@ public class DetailsViewController: UIViewController {
         setBorderButton()
         //print(coinsResult[0].assetID)
         
+        setTitleButton(list: favoriteList, id: id)
+        
+        
         print(formatNumberToDecimal(value: 8989009090.090))
+ 
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        
         
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector (tap))
@@ -94,28 +105,42 @@ extension DetailsViewController {
         favButton.layer.borderWidth = 0.8
         favButton.layer.borderColor = (UIColor( red: 255, green: 255, blue:255, alpha: 255 )).cgColor
     }
+    func setTitleButton(list: String, id: String) {
+
+        if list.contains(id){
+            favButton.setTitle("REMOVER", for: .normal)
+         } else {
+            favButton.setTitle("ADICIONAR", for: .normal)
+        }
+    }
     
     
     @objc func tap() {
-        botaoFavorito(favButton, list: list)
-        viewDidLoad()
-    }
+           botaoFavorito(favButton, list: favoriteList)
+       }
     
-    @IBAction func botaoFavorito(_ sender: UIButton, list: String) {
-            
-        let sigla: Substring = "AAA"
-        
-        var favorite = list.split(separator: "|")
-        if favorite.contains(sigla){
+ @IBAction func botaoFavorito(_ sender: UIButton, list: String) {
+//
+        let sigla = "BTC"
+
+    var favorite = Utilities.decode(idListString: list)
+        if favorite.contains(id){
             favButton.setTitle("REMOVER", for: .normal)
-            favorite = Array(Set(favorite).subtracting([sigla]))
+            favorite = Array(Set(favorite).subtracting([id]))
             print("remover")
+            print(favorite)
+
          } else {
-            favButton.setTitle("Adicionar", for: .normal)
+            favButton.setTitle("ADICIONA", for: .normal)
             print("adicionar")
         }
+    let newList = Utilities.encode(idList: favorite)
+        favoriteList = newList
         print(favorite)
+    
     }
+    
+    
 }
 
 //MARK: Extension - Formatter
