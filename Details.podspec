@@ -42,7 +42,6 @@ TODO: Add long description of the pod here.
   
   s.dependency 'LucasCoinAPI'
   s.dependency 'LucasUtilities'
- 
   s.dependency 'AlamofireImage'
   
   

@@ -14,11 +14,11 @@ import Foundation
 public struct Coin: Codable {
 	public let assetID: String
 	public let name: String?
-	let typeIsCrypto: Int
-	let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String?
-	let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: String?
-	let dataSymbolsCount: Int
-	let volume1HrsUsd, volume1DayUsd, volume1MthUsd: Double
+	public let typeIsCrypto: Int
+	public let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String?
+	public let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: String?
+	public let dataSymbolsCount: Int
+	public let volume1HrsUsd, volume1DayUsd, volume1MthUsd: Double
 	public let priceUsd: Double?
 	public let idIcon: String?
 
