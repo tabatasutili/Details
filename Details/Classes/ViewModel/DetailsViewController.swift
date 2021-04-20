@@ -22,7 +22,8 @@ public class DetailsViewController: UIViewController {
     @IBOutlet weak var lastHour: UILabel!
     @IBOutlet weak var lastMonth: UILabel!
     @IBOutlet weak var lastDay: UILabel!
-	
+
+    
     //MARK: Variables
     
     var coins = [Coin]()
@@ -46,6 +47,7 @@ public class DetailsViewController: UIViewController {
         super.viewDidLoad()
 				
 		retrieveFavoriteList()
+        accessibilityDetails()
 		fetchData()
         setupUI()
     }
@@ -120,12 +122,34 @@ public class DetailsViewController: UIViewController {
 	}
 	
 	func setCoinLabels(for coinViewModel: DetailsViewModel) {
+        
 		siglaLabel.text = coinViewModel.identifier
 		priceLabel.text = Utilities.formatCoin(coinAmount: coinViewModel.price)
 		lastHour.text = Utilities.formatCoin(coinAmount: coinViewModel.lastHour)
 		lastMonth.text = Utilities.formatCoin(coinAmount: coinViewModel.lastMonth)
 		lastDay.text = Utilities.formatCoin(coinAmount: coinViewModel.lastDay)
 	}
+    
+    func accessibilityDetails(){
+        
+        siglaLabel.isAccessibilityElement = true
+        siglaLabel.accessibilityHint = "Sigla da moeda"
+        
+        priceLabel.isAccessibilityElement = true
+        priceLabel.accessibilityHint = "Preço da moeda"
+        
+        lastHour.isAccessibilityElement = true
+        lastHour.accessibilityHint = "Volume negociado na última hora"
+        
+        lastDay.isAccessibilityElement = true
+        lastMonth.accessibilityHint = "Volume negociado no último dia"
+  
+        lastMonth.isAccessibilityElement = true
+        lastMonth.accessibilityHint = "Volume negociado no último ano"
+        
+        favButton.isAccessibilityElement = true
+        favButton.accessibilityHint = "Clique no botão para dicionar ou remover a moeda dos favoritos"
+    }
 	
 	func setCoinIcon(for coinViewModel: DetailsViewModel) {
 		
