@@ -26,14 +26,18 @@ public class DetailsViewController: UIViewController {
     
     //MARK: Variables
     
-    var coins = [Coin]()
+
 	var favoriteList = [String]()
+    var coin: Coin
     var id: String
+    
     
     //MARK: Init
     
-    public init(id: String){
-        self.id = id
+    public init(coin: Coin){
+        self.coin = coin
+        
+        id = coin.assetID
         super.init(nibName:"DetailsViewController", bundle: Bundle(for: DetailsViewController.self))
     }
    
@@ -48,15 +52,15 @@ public class DetailsViewController: UIViewController {
 				
 		retrieveFavoriteList()
         accessibilityDetails()
-		fetchData()
         setupUI()
+        
     }
 	
 	// MARK: - IBActions
 	
 	@IBAction func toggleFavorite(_ sender: Any) {
 		print("Clicked toggle favorite button")
-				
+
 		if isFavorite(id: self.id) {
 			removeFromFavorite(id)
 		} else {
@@ -101,10 +105,6 @@ public class DetailsViewController: UIViewController {
 		return favoriteList.contains(id)
 	}
 	
-	func fetchData() {
-		coins = API.requestCoinList(assetId: id)
-	}
-	
 	func setButtonLabel(buttonTitle: String) {
 		favButton.setTitle(buttonTitle, for: .normal)
 	}
@@ -116,8 +116,8 @@ public class DetailsViewController: UIViewController {
 	}
 	
 	func getCoin() -> DetailsViewModel {
-		let coin = coins.first
-		let coinViewModel = DetailsViewModel(coin: coin!)
+		let coins = coin
+        let coinViewModel = DetailsViewModel(coin: coins)
 		return coinViewModel
 	}
 	

@@ -8,18 +8,23 @@
 
 import UIKit
 import Details
-import API
+import LucasCoinAPI
 import DataModels
 
 class ViewController: UIViewController {
+    
+    
+    var coins: [Coin] = []
+    var allCoins: [Coin] = []
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        fetchData()
 
-        
-     var viewController = DetailsViewController(id: "BTC")
+        let coin = coins[2]
+       
+        var viewController = DetailsViewController(coin: coin)
      self.navigationController?.pushViewController(viewController, animated: true)
         
     }
@@ -27,6 +32,11 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    func fetchData() {
+        allCoins = API.requestCoinList()
+        coins = allCoins
     }
  
 }
